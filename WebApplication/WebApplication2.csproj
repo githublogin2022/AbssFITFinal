@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DE30858-84CF-4131-921B-6FDE51B1E37D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication2</RootNamespace>
+    <AssemblyName>WebApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=4.1.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.4.1.6.0.4.1.6\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Twilio, Version=5.80.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Twilio.5.80.0\lib\net451\Twilio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\Home.css" />
+    <Content Include="assets\css\nicepage.css" />
+    <Content Include="assets\img\slider\1.jpg" />
+    <Content Include="assets\img\slider\2.jpg" />
+    <Content Include="assets\img\slider\3.jpg" />
+    <Content Include="assets\img\slider\4.jpg" />
+    <Content Include="assets\img\slider\5.jpeg" />
+    <Content Include="assets\img\slider\6.png" />
+    <Content Include="assets\js\nicepage.js" />
+    <Content Include="EditImages.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="AddInvoice.aspx" />
+    <Content Include="BirthdayMemberList.aspx" />
+    <Content Include="ExpiryMemberList.aspx" />
+    <Content Include="Home.html" />
+    <Content Include="images\Gym\qrcode.png" />
+    <Content Include="images\Slider\1.jpg" />
+    <Content Include="images\Slider\2.jpg" />
+    <Content Include="images\Slider\3.jpg" />
+    <Content Include="images\Slider\4.jpg" />
+    <Content Include="images\Slider\5.jpeg" />
+    <Content Include="images\Slider\6.png" />
+    <Content Include="images\team\team-1.jpg" />
+    <Content Include="images\team\team-2.jpg" />
+    <Content Include="images\team\team-3.jpg" />
+    <Content Include="images\team\team-4.jpg" />
+    <Content Include="images\Transformation\1.jpg" />
+    <Content Include="images\Transformation\10.jpg" />
+    <Content Include="images\Transformation\11.jpg" />
+    <Content Include="images\Transformation\12.jpg" />
+    <Content Include="images\Transformation\13.jpg" />
+    <Content Include="images\Transformation\14.jpg" />
+    <Content Include="images\Transformation\15.jpg" />
+    <Content Include="images\Transformation\16.jpg" />
+    <Content Include="images\Transformation\17.jpg" />
+    <Content Include="images\Transformation\18.jpg" />
+    <Content Include="images\Transformation\19.jpg" />
+    <Content Include="images\Transformation\2.jpg" />
+    <Content Include="images\Transformation\20.jpg" />
+    <Content Include="images\Transformation\21.jpg" />
+    <Content Include="images\Transformation\3.jpg" />
+    <Content Include="images\Transformation\4.jpg" />
+    <Content Include="images\Transformation\5.jpg" />
+    <Content Include="images\Transformation\6.jpg" />
+    <Content Include="images\Transformation\7.jpg" />
+    <Content Include="images\Transformation\8.jpg" />
+    <Content Include="images\Transformation\9.jpg" />
+    <Content Include="InActiveMemberList.aspx" />
+    <Content Include="assets\css\images\InitialImage.png" />
+    <Content Include="assets\css\images\SelectedButton.png" />
+    <Content Include="bin\ClassLibrary1.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\Twilio.dll" />
+    <Content Include="bin\WebApplication2.dll" />
+    <Content Include="bin\WebApplication2.pdb" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="AddMeasurements.aspx" />
+    <Content Include="assets\css\animate-headline.css" />
+    <Content Include="assets\css\animate.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\bundle.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\images\ui-bg_glass_75_d0e5f5_1x400.html" />
+    <Content Include="assets\css\images\ui-bg_glass_85_dfeffc_1x400.html" />
+    <Content Include="assets\css\images\ui-bg_glass_95_fef1ec_1x400.html" />
+    <Content Include="assets\css\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="assets\css\images\ui-bg_inset-hard_100_f5f8f9_1x100.html" />
+    <Content Include="assets\css\images\ui-bg_inset-hard_100_fcfdfd_1x100.html" />
+    <Content Include="assets\css\images\ui-icons_217bc0_256x240.html" />
+    <Content Include="assets\css\images\ui-icons_2e83ff_256x240.html" />
+    <Content Include="assets\css\images\ui-icons_469bdd_256x240.html" />
+    <Content Include="assets\css\images\ui-icons_6da8d5_256x240.html" />
+    <Content Include="assets\css\images\ui-icons_cd0a0a_256x240.html" />
+    <Content Include="assets\css\images\ui-icons_d8e7f3_256x240.html" />
+    <Content Include="assets\css\images\ui-icons_f9bd01_256x240.html" />
+    <Content Include="assets\css\jquery-ui.css" />
+    <Content Include="assets\css\magnific-popup.css" />
+    <Content Include="assets\css\meanmenu.min.css" />
+    <Content Include="assets\css\owl.carousel.min.css" />
+    <Content Include="assets\css\owl.video.play.html" />
+    <Content Include="assets\css\pe-icon-7-stroke.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\Counter.css" />
+    <Content Include="assets\css\TabMenu.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular-5.html" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="assets\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="assets\fonts\Pe-icon-7-strokebb1d.svg" />
+    <Content Include="assets\img\banner\10.jpg" />
+    <Content Include="assets\img\banner\11.jpg" />
+    <Content Include="assets\img\banner\12.jpg" />
+    <Content Include="assets\img\banner\13.jpg" />
+    <Content Include="assets\img\banner\14.jpg" />
+    <Content Include="assets\img\banner\15.jpg" />
+    <Content Include="assets\img\banner\6.jpg" />
+    <Content Include="assets\img\banner\7.jpg" />
+    <Content Include="assets\img\banner\9.jpg" />
+    <Content Include="assets\img\bg\2.jpg" />
+    <Content Include="assets\img\blog\1.jpg" />
+    <Content Include="assets\img\blog\2.jpg" />
+    <Content Include="assets\img\blog\3.jpg" />
+    <Content Include="assets\img\blog\4.jpg" />
+    <Content Include="assets\img\blog\5.jpg" />
+    <Content Include="assets\img\blog\6.jpg" />
+    <Content Include="assets\img\blog\blog-details.jpg" />
+    <Content Include="assets\img\blog\s1.jpg" />
+    <Content Include="assets\img\blog\s2.jpg" />
+    <Content Include="assets\img\blog\s3.jpg" />
+    <Content Include="assets\img\cart\1.jpg" />
+    <Content Include="assets\img\cart\2.jpg" />
+    <Content Include="assets\img\favicon.ico" />
+    <Content Include="assets\img\icon-img\1.png" />
+    <Content Include="assets\img\icons\invalid.png" />
+    <Content Include="assets\img\icons\valid.png" />
+    <Content Include="assets\img\logo\logo-black.png" />
+    <Content Include="assets\img\logo\logo.png" />
+    <Content Include="assets\img\shop\1.jpg" />
+    <Content Include="assets\img\shop\2.jpg" />
+    <Content Include="assets\img\shop\3.jpg" />
+    <Content Include="assets\img\shop\4.jpg" />
+    <Content Include="assets\img\shop\5.jpg" />
+    <Content Include="assets\img\shop\6.jpg" />
+    <Content Include="assets\img\shop\equal\1.jpg" />
+    <Content Include="assets\img\shop\equal\10.jpg" />
+    <Content Include="assets\img\shop\equal\11.jpg" />
+    <Content Include="assets\img\shop\equal\12.jpg" />
+    <Content Include="assets\img\shop\equal\13.jpg" />
+    <Content Include="assets\img\shop\equal\14.jpg" />
+    <Content Include="assets\img\shop\equal\15.jpg" />
+    <Content Include="assets\img\shop\equal\16.jpg" />
+    <Content Include="assets\img\shop\equal\2.jpg" />
+    <Content Include="assets\img\shop\equal\3.jpg" />
+    <Content Include="assets\img\shop\equal\4.jpg" />
+    <Content Include="assets\img\shop\equal\5.jpg" />
+    <Content Include="assets\img\shop\equal\6.jpg" />
+    <Content Include="assets\img\shop\equal\7.jpg" />
+    <Content Include="assets\img\shop\equal\8.jpg" />
+    <Content Include="assets\img\shop\equal\9.jpg" />
+    <Content Include="assets\img\shop\q1.jpg" />
+    <Content Include="assets\img\shop\q2.jpg" />
+    <Content Include="assets\img\shop\q3.jpg" />
+    <Content Include="assets\img\shop\q4.jpg" />
+    <Content Include="assets\img\team\5.jpg" />
+    <Content Include="assets\img\team\6.jpg" />
+    <Content Include="assets\img\team\7.jpg" />
+    <Content Include="assets\img\team\team-1.jpg" />
+    <Content Include="assets\img\team\team-2.jpg" />
+    <Content Include="assets\img\team\team-3.jpg" />
+    <Content Include="assets\img\team\team-4.jpg" />
+    <Content Include="assets\img\testimonial\1.jpg" />
+    <Content Include="assets\img\testimonial\2.jpg" />
+    <Content Include="assets\img\testimonial\3.jpg" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\imagesloaded.pkgd.min.js" />
+    <Content Include="assets\js\isotope.pkgd.min.js" />
+    <Content Include="assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="assets\js\jquery.meanmenu.js" />
+    <Content Include="assets\js\jquery.validate.min.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\owl.carousel.min.js" />
+    <Content Include="assets\js\plugins.js" />
+    <Content Include="assets\js\vendor\jquery-1.12.0.min.js" />
+    <Content Include="assets\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\bg\1.html" />
+    <Content Include="images\bg\10.html" />
+    <Content Include="images\bg\2.html" />
+    <Content Include="images\bg\3.html" />
+    <Content Include="images\bg\4.html" />
+    <Content Include="images\bg\5.html" />
+    <Content Include="images\bg\6.html" />
+    <Content Include="images\bg\7.html" />
+    <Content Include="images\bg\8.html" />
+    <Content Include="images\bg\9.html" />
+    <Content Include="images\Gym\Active.png" />
+    <Content Include="images\Gym\greentick.png" />
+    <Content Include="images\Gym\gymlogo.png" />
+    <Content Include="images\Gym\gymlogo2.png" />
+    <Content Include="images\Gym\HomePage.jpg" />
+    <Content Include="images\Gym\Inactive.png" />
+    <Content Include="images\Gym\redcross.png" />
+    <Content Include="images\pattern\pattern-bg.html" />
+    <Content Include="lib\css\nivo-slider.css" />
+    <Content Include="lib\css\preview.css" />
+    <Content Include="lib\home.js" />
+    <Content Include="lib\img\arrows.png" />
+    <Content Include="lib\img\bullets.png" />
+    <Content Include="lib\img\loading.gif" />
+    <Content Include="lib\js\jquery.nivo.slider.js" />
+    <Content Include="MemberDetails.aspx" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="EnquiryList.aspx" />
+    <Content Include="ActiveMemberList.aspx" />
+    <Content Include="MemberList.aspx" />
+    <Content Include="AddWeeklyCheckup.aspx" />
+    <Content Include="MemberRegistration.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="PdfShow.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EditImages.aspx.cs">
+      <DependentUpon>EditImages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditImages.aspx.designer.cs">
+      <DependentUpon>EditImages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddInvoice.aspx.cs">
+      <DependentUpon>AddInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddInvoice.aspx.designer.cs">
+      <DependentUpon>AddInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BirthdayMemberList.aspx.cs">
+      <DependentUpon>BirthdayMemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BirthdayMemberList.aspx.designer.cs">
+      <DependentUpon>BirthdayMemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExpiryMemberList.aspx.cs">
+      <DependentUpon>ExpiryMemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExpiryMemberList.aspx.designer.cs">
+      <DependentUpon>ExpiryMemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler2.ashx.cs">
+      <DependentUpon>Handler2.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="InActiveMemberList.aspx.cs">
+      <DependentUpon>InActiveMemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InActiveMemberList.aspx.designer.cs">
+      <DependentUpon>InActiveMemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddMeasurements.aspx.cs">
+      <DependentUpon>AddMeasurements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddMeasurements.aspx.designer.cs">
+      <DependentUpon>AddMeasurements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Common.cs" />
+    <Compile Include="DAL\PDFHelper.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberDetails.aspx.cs">
+      <DependentUpon>MemberDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberDetails.aspx.designer.cs">
+      <DependentUpon>MemberDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnquiryList.aspx.cs">
+      <DependentUpon>EnquiryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnquiryList.aspx.designer.cs">
+      <DependentUpon>EnquiryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveMemberList.aspx.cs">
+      <DependentUpon>ActiveMemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActiveMemberList.aspx.designer.cs">
+      <DependentUpon>ActiveMemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberList.aspx.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberList.aspx.designer.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddWeeklyCheckup.aspx.cs">
+      <DependentUpon>AddWeeklyCheckup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddWeeklyCheckup.aspx.designer.cs">
+      <DependentUpon>AddWeeklyCheckup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberRegistration.aspx.cs">
+      <DependentUpon>MemberRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemberRegistration.aspx.designer.cs">
+      <DependentUpon>MemberRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PdfShow.aspx.cs">
+      <DependentUpon>PdfShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PdfShow.aspx.designer.cs">
+      <DependentUpon>PdfShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="assets\fonts\Pe-icon-7-strokebb1d.eot" />
+    <Content Include="assets\fonts\Pe-icon-7-strokebb1d.ttf" />
+    <Content Include="assets\fonts\Pe-icon-7-strokebb1d.woff" />
+    <Content Include="assets\fonts\Pe-icon-7-stroked41d.eot" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="assets\pdf\ABSFIT_Invoice.pdf" />
+    <Content Include="bin\WebApplication2.dll.config" />
+    <Content Include="Handler1.ashx" />
+    <Content Include="Handler2.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55057</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55057/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

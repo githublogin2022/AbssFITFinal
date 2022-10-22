@@ -1,0 +1,8 @@
+C:\Users\kumbhars\Desktop\Sachin\Product\Fitness Project\ABSFIT\WebApplication2\WebApplication2\bin\WebApplication2.dll.config
+C:\Users\kumbhars\Desktop\Sachin\Product\Fitness Project\ABSFIT\WebApplication2\WebApplication2\bin\WebApplication2.dll
+C:\Users\kumbhars\Desktop\Sachin\Product\Fitness Project\ABSFIT\WebApplication2\WebApplication2\bin\WebApplication2.pdb
+C:\Users\kumbhars\Desktop\Sachin\Product\Fitness Project\ABSFIT\WebApplication2\WebApplication2\obj\Release\WebApplication2.csproj.AssemblyReference.cache
+C:\Users\kumbhars\Desktop\Sachin\Product\Fitness Project\ABSFIT\WebApplication2\WebApplication2\obj\Release\WebApplication2.csproj.CoreCompileInputs.cache
+C:\Users\kumbhars\Desktop\Sachin\Product\Fitness Project\ABSFIT\WebApplication2\WebApplication2\obj\Release\WebApplication2.csproj.CopyComplete
+C:\Users\kumbhars\Desktop\Sachin\Product\Fitness Project\ABSFIT\WebApplication2\WebApplication2\obj\Release\WebApplication2.dll
+C:\Users\kumbhars\Desktop\Sachin\Product\Fitness Project\ABSFIT\WebApplication2\WebApplication2\obj\Release\WebApplication2.pdb

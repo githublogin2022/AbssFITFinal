@@ -1,0 +1,60 @@
+:root{
+    --white: #fff;
+    --black: #000;
+    --light-gray: linear-gradient(to right,#FFFFFF,#E3E4E8);
+    --color_1: linear-gradient(45deg,#26A9D5,#28B17B);
+    --color_2: linear-gradient(45deg,#F36D74,#DE214B);
+    --color_3: linear-gradient(45deg,#A66EAF,#BB138C);
+    --color_4: linear-gradient(45deg,#FBB249,#D46122);
+}
+.counter{
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    padding: 60px 35px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+.counter:before,
+.counter:after{
+    content: '';
+    background: var(--light-gray);
+    height: 75%;
+    width: 75%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    transform: translateX(-50%) translateY(-50%) rotate(46deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+.counter:after{
+    background: var(--color_1);
+    box-shadow: 0 0 5px transparent;
+    transform:translateX(-50%) translateY(-50%) rotate(19deg);
+}
+.counter:hover:before{ transform:translateX(-50%) translateY(-50%) rotate(225deg); }
+.counter:hover:after{ box-shadow: 0 0 10px rgba(0,0,0,0.5) inset; }
+.counter .counter-value{
+    font-size: 30px;
+    font-weight: 600;
+}
+.counter h3{
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.counter:hover h3{ transform: rotateX(360deg); }
+.counter.red:after{ background: var(--color_2); }
+.counter.purple:after{ background: var(--color_3); }
+.counter.orange:after{ background: var(--color_4); }
+@media screen and (max-width:990px){
+    .counter{ margin-bottom: 40px; }
+}
